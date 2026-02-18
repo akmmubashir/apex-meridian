@@ -62,6 +62,7 @@ const ServiceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: false, margin: "-100px" }}
+            id="services"
           >
             <SubHeading className="text-center">Our Services</SubHeading>
             <Heading className="max-lg:hidden text-[46px] max-lg:text-[34px] font-light text-center">
