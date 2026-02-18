@@ -8,7 +8,7 @@ import CTASection from "./components/CTASection";
 
 const HomePage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       <Header />
       <HeroSection />
       <ServiceSection />

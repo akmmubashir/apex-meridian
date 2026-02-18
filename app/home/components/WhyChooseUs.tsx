@@ -49,22 +49,27 @@ const WhyChooseUs = () => {
       }}
     >
       <Container>
-        <div className="grid grid-cols-12 gap-25 items-center">
+        <div className="grid grid-cols-12 gap-25 max-lg:gap-[40px_0] items-center">
           <div className="col-span-6 max-lg:col-span-full flex flex-col gap-7.5">
             <div className="flex flex-col gap-5">
               <SubHeading darkmode>WHY APEX MERIDIAN</SubHeading>
-              <Heading darkmode>
+              <Heading darkmode className="max-lg:hidden">
                 The Strategic Partner <br /> Leaders Trust
+              </Heading>
+              <Heading darkmode className="lg:hidden">
+                The Strategic Partner Leaders Trust
               </Heading>
             </div>
             <Paragraph darkmode className="">
               For over a decade, we&apos;ve guided industry leaders through
-              pivotal moments—from transformative acquisitions to
+              pivotal moments from transformative acquisitions to
               market-defining growth initiatives.
             </Paragraph>
-            <div className="w-fit p-[30px_50px] border border-white/50 rounded-[20px]">
-              <p className="text-[#C9AA5E] text-[64px]">$ 2B+</p>
-              <p className="text-[22px] text-[#9AA6AC]">
+            <div className="w-fit p-[30px_50px] max-lg:p-[20px_30px] border border-white/50 rounded-[20px]">
+              <p className="text-[#C9AA5E] text-[64px] max-2xl:text-[48px] max-lg:text-[36px]">
+                $ 2B+
+              </p>
+              <p className="text-[22px] max-2xl:text-[20px] max-lg:text-[16px] text-[#9AA6AC]">
                 in guided capital
                 <br />
                 initiatives
@@ -75,7 +80,7 @@ const WhyChooseUs = () => {
             {whyChooseUsData.map((item) => (
               <div
                 key={item.id}
-                className="col-span-6 max-md:col-span-full bg-[#0C271A]/30 border border-white/50 rounded-[20px] p-7.5 flex flex-col h-fit gap-3"
+                className="col-span-6 max-md:col-span-full bg-[#0C271A]/30 border border-white/50 rounded-[20px] p-7.5 max-lg:p-6 flex flex-col h-fit gap-3"
               >
                 <div className="bg-[#C9AA5F]/15 w-10 h-10 rounded-md flex flex-col justify-center items-center">
                   <Image
@@ -86,8 +91,12 @@ const WhyChooseUs = () => {
                     height={24}
                   />
                 </div>
-                <h6 className="text-[20px] text-white">{item.title}</h6>
-                <p className="text-[14px] text-[#F7F7F7]/70">{item.content}</p>
+                <h6 className="text-[20px] text-white font-light">
+                  {item.title}
+                </h6>
+                <p className="text-[14px] text-[#F7F7F7]/70 font-light">
+                  {item.content}
+                </p>
               </div>
             ))}
           </div>

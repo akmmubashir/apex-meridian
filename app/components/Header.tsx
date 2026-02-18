@@ -24,7 +24,7 @@ const Header = () => {
               height={100}
             />
           </Link>
-          <div className="bg-[#D9D9D9]/5 border border-white/20 p-[10px_40px] rounded-full flex items-center gap-9">
+          <div className="max-lg:hidden bg-[#D9D9D9]/5 border border-white/20 p-[10px_40px] rounded-full flex items-center gap-9">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -35,7 +35,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          <button className="p-[10px_40px] rounded-full bg-[#C9AA5F] hover:bg-[#B9984F] text-[#0C271A] text-[16px] font-semibold cursor-pointer">
+          <button className="max-lg:hidden p-[10px_40px] rounded-full bg-[#C9AA5F] hover:bg-[#B9984F] text-[#0C271A] text-[16px] font-semibold cursor-pointer">
             Schedule Consultation
           </button>
         </div>

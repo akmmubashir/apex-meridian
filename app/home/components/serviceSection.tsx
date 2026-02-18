@@ -46,12 +46,15 @@ const ServiceSection = () => {
   return (
     <div className="bg-[#F6F1E8]">
       <Container>
-        <div className="flex flex-col gap-7.5">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-7.5 max-lg:gap-[20px_0]">
+          <div className="flex flex-col gap-4 max-md:gap-2">
             <SubHeading className="text-center">Our Services</SubHeading>
-            <Heading className="text-[46px] font-light text-center">
+            <Heading className="max-lg:hidden text-[46px] max-lg:text-[34px] font-light text-center">
               Strategic Solutions for <br />
               Complex Challenges
+            </Heading>
+            <Heading className="lg:hidden text-[46px] max-lg:text-[34px] max-md:text-[30px] font-light text-center">
+              Strategic Solutions <br /> for Complex Challenges
             </Heading>
           </div>
           <div className="flex justify-center">
@@ -61,11 +64,11 @@ const ServiceSection = () => {
               and growth-focused CEOs.
             </Paragraph>
           </div>
-          <div className="grid grid-cols-12 gap-12.5">
+          <div className="grid grid-cols-12 gap-12.5 max-lg:gap-[30px_0]">
             {services.map((service) => (
               <div
                 key={service.id}
-                className="col-span-4 max-lg:col-span-full bg-[#FAFAFA] rounded-[30px] p-7.5 flex flex-col gap-5"
+                className="col-span-4 max-lg:col-span-full bg-[#FAFAFA] rounded-[30px] p-7.5 flex flex-col gap-5 max-lg:gap-3"
               >
                 <div className="bg-[#C9AA5E] w-14 h-14 rounded-lg flex justify-center items-center">
                   <Image
@@ -77,10 +80,10 @@ const ServiceSection = () => {
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h6 className="text-[24px] text-[#0C271A]">
+                  <h6 className="text-[24px] max-lg:text-[18px] text-[#0C271A]">
                     {service.title}
                   </h6>
-                  <Paragraph className="">{service.content}</Paragraph>
+                  <Paragraph>{service.content}</Paragraph>
                 </div>
                 <div className="bg-[#C9AA5E] w-12 h-px" />
                 <div>

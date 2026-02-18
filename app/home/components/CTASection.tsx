@@ -6,23 +6,22 @@ import { ArrowRight } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <div className="bg-[#F6F1E8] py-20">
+    <div className="bg-[#F6F1E8] py-20 max-lg:py-5">
       <Container>
-        <div className="flex flex-col gap-7.5">
-          <Heading className="text-[46px] font-light text-center">
+        <div className="flex flex-col max-lg:items-center gap-7.5 max-lg:gap-[20px_0]">
+          <Heading className="text-[46px] max-lg:text-[36px] font-light text-center max-md:w-3/4">
             Ready to Navigate Your <br />
             <span className="text-[#C9AA5F]">Next Strategic Move?</span>
           </Heading>
 
           <div className="flex justify-center">
-            <Paragraph className="text-center w-3/5">
-              We offer a range of strategic advisory services tailored to the
-              unique needs of private equity firms, corporate innovation teams,
-              and growth-focused CEOs.
+            <Paragraph className="text-center w-3/5 max-lg:w-2/4">
+              Schedule a confidential consultation with our senior partners to
+              discuss how we can accelerate your strategic priorities.
             </Paragraph>
           </div>
           <div className="flex justify-center items-center">
-            <div className="flex gap-2.5">
+            <div className="flex flex-wrap max-lg:justify-center gap-2.5 max-lg:mt-3">
               <button className="cursor-pointer bg-[#0C271A] hover:bg-[#C9AA5E] text-white rounded-full p-[8px_30px] font-medium border-2 border-[#0C271A]/50 hover:border-[#C9AA5E]/50 transition-colors duration-300">
                 <span className="flex items-center gap-2">
                   Request Strategy Session

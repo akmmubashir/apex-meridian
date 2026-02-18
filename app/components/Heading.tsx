@@ -17,7 +17,7 @@ const Heading = (props: Props) => {
   const { children, className, darkmode } = props;
   return (
     <h2
-      className={`text-[46px] font-light leading-tight ${inriaSerif.className} ${darkmode ? " text-white" : "text-[#0C271A]"} ${className}`}
+      className={`text-[46px] max-2xl:text-[40px] max-lg:text-[34px] font-light leading-tight ${inriaSerif.className} ${darkmode ? " text-white" : "text-[#0C271A]"} ${className}`}
     >
       {children}
     </h2>
