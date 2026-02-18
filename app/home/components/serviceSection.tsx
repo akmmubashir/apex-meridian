@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import Container from "@/app/components/ui/Container";
 import SubHeading from "@/app/components/SubHeading";
 import Heading from "@/app/components/Heading";
 import Paragraph from "@/app/components/Paragraph";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ServiceSection = () => {
   const services = [
@@ -44,10 +47,22 @@ const ServiceSection = () => {
     },
   ];
   return (
-    <div className="bg-[#F6F1E8]">
+    <div className="bg-[#F6F1E8] pt-20 max-lg:pt-30">
       <Container>
-        <div className="flex flex-col gap-7.5 max-lg:gap-[20px_0]">
-          <div className="flex flex-col gap-4 max-md:gap-2">
+        <motion.div
+          className="flex flex-col gap-7.5 max-lg:gap-[20px_0]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false, margin: "-100px" }}
+        >
+          <motion.div
+            className="flex flex-col gap-4 max-md:gap-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, margin: "-100px" }}
+          >
             <SubHeading className="text-center">Our Services</SubHeading>
             <Heading className="max-lg:hidden text-[46px] max-lg:text-[34px] font-light text-center">
               Strategic Solutions for <br />
@@ -56,19 +71,36 @@ const ServiceSection = () => {
             <Heading className="lg:hidden text-[46px] max-lg:text-[34px] max-md:text-[30px] font-light text-center">
               Strategic Solutions <br /> for Complex Challenges
             </Heading>
-          </div>
-          <div className="flex justify-center">
+          </motion.div>
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: false, margin: "-100px" }}
+          >
             <Paragraph className="text-center w-3/5">
               We offer a range of strategic advisory services tailored to the
               unique needs of private equity firms, corporate innovation teams,
               and growth-focused CEOs.
             </Paragraph>
-          </div>
-          <div className="grid grid-cols-12 gap-12.5 max-lg:gap-[30px_0]">
-            {services.map((service) => (
-              <div
+          </motion.div>
+          <motion.div
+            className="grid grid-cols-12 gap-12.5 max-lg:gap-[30px_0]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: false, margin: "-100px" }}
+          >
+            {services.map((service, index) => (
+              <motion.div
                 key={service.id}
                 className="col-span-4 max-lg:col-span-full bg-[#FAFAFA] rounded-[30px] p-7.5 flex flex-col gap-5 max-lg:gap-3"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: false, margin: "-100px" }}
+                whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
               >
                 <div className="bg-[#C9AA5E] w-14 h-14 rounded-lg flex justify-center items-center">
                   <Image
@@ -96,10 +128,10 @@ const ServiceSection = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </Container>
     </div>
   );
