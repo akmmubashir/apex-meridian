@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./ui/Container";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu } from "lucide-react";
 
 // type Props = {}
 
@@ -14,7 +15,7 @@ const Header = () => {
   ];
   return (
     <div className="fixed top-0 z-30 w-full">
-      <Container padding="bg-transparent p-[20px_80px] max-2xl:p-[20px_80px] max-lg:p-[20px_40px] max-md:p-[10px_20px]">
+      <Container padding="bg-transparent p-[20px_80px] max-2xl:p-[20px_80px] max-lg:p-[20px_40px] max-md:p-[20px_20px]">
         <div className="flex items-center justify-between gap-5 w-full">
           <Link href="/">
             <Image
@@ -35,8 +36,11 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          <button className="max-lg:hidden p-[10px_40px] rounded-full bg-[#C9AA5F] hover:bg-[#B9984F] text-[#0C271A] text-[16px] font-semibold cursor-pointer">
+          <button className="max-lg:hidden p-[10px_40px] rounded-full bg-[#C9AA5F] hover:bg-white text-[#0C271A] hover:text-[#2a2a2a] text-[16px] font-semibold cursor-pointer transition-colors duration-300">
             Schedule Consultation
+          </button>
+          <button className="lg:hidden text-white text-[16px] cursor-pointer">
+            <Menu size={24} />
           </button>
         </div>
       </Container>
